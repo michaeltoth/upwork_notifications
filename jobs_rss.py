@@ -1,4 +1,5 @@
 import feedparser
+import os
 import pytz
 import re
 import requests
@@ -16,7 +17,8 @@ from datetime import datetime
 
 base_url = "https://www.upwork.com/ab/feed/jobs/rss"
 categories = "?category2_uid=531770282580668420%2C531770282580668422%2C531770282580668418%2C531770282580668423"
-slack_token = 'xoxb-3539006320195-6335580180706-oRzGKTw1gx1dH8cUedPSUqoZ'
+slack_token = os.getenv('SLACK_TOKEN')
+print(slack_token)
 
 
 
